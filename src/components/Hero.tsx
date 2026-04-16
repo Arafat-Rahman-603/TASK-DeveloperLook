@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import HeroCard from "./HeroCard";
 
 export default function Hero() {
   return (
@@ -13,8 +14,17 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
       >
-        Let&apos;s Get Hyped!
+        Get Hyped. Get Noticed. Get Results.
       </motion.h1>
+
+      <motion.p
+        className="hero-subtitle"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+      >
+        Klaar met gokken op content<br />die niets oplevert?
+      </motion.p>
 
       <motion.div
         className="hero-buttons"
@@ -41,7 +51,7 @@ export default function Hero() {
         </button>
 
         <button className="btn-primary">
-          Get Results
+          Bekijk Resultaten
           <span className="btn-squircle-icon">
             <svg
               className="arrow-svg"
@@ -57,6 +67,10 @@ export default function Hero() {
           </span>
         </button>
       </motion.div>
+
+      <div className="hero-cards-wrapper" style={{ marginTop: "40px", width: "100%" }}>
+        <HeroCard />
+      </div>
     </section>
   );
 }

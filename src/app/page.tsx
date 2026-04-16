@@ -13,7 +13,6 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
-      <HeroCard />
       <div className="section-divider" />
       <IntroSection />
       <div className="section-divider" />

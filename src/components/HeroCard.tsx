@@ -157,7 +157,7 @@ function TiltCard({
             justifyContent: "space-between",
             padding: "32px",
             backgroundColor: card.bg,
-            color: "var(--white)",
+            color: "var(--text-dark)",
             border: "5px solid var(--white)",
             borderRadius: "var(--radius-xl)",
           }}
@@ -174,7 +174,7 @@ function TiltCard({
           </span>
           <div
             style={{
-              borderTop: "3px solid rgba(255,255,255,0.3)",
+              borderTop: "3px solid rgba(0,0,0,0.1)",
               paddingTop: "16px",
             }}
           >
@@ -299,6 +299,10 @@ export default function HeroCard() {
           <div
             key={i}
             className="hero-card-wrapper"
+            style={{ 
+              marginLeft: i === 0 ? "0" : "-40px",
+              zIndex: hoveredIndex === i ? 20 : i 
+            }}
           >
             <TiltCard
               card={card}
